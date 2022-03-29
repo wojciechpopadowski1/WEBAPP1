@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title>Aplikacja GlobaLogic - Tour de GlobalLogic</title>
+    <script src="{{ url_for('static', filename='progress_list.js') }}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js%22%3E"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='TDGL.css') }}" />
+{% endblock %}
+{% block content %}
+<HEADER id="web-header">
+    <DIV id="header-panel">Tour de GlobalLogic</DIV>
+        <BUTTON id="header-left-button"><A href="/Tour_de_GlobalLogic#web-section-odkryj" class="header-button-link"><DIV class="header-button-link-text">Przejdź dalej</DIV></A></BUTTON>
+        <BUTTON id="header-right-button"><A href="/Tour_de_GlobalLogic#web-section-postepy" class="header-button-link"><DIV class="header-button-link-text">Przejdź dalej</DIV></A></BUTTON>
+        
+        <DIV id="header-triangle-left-info">Odkryj Tour de Globallogic</DIV>
+        <DIV id="header-triangle-right-info">Analizuj swoje postępy</DIV>
+        <DIV id="header-triangle-left"></DIV>
+        <DIV id="header-triangle-right"></DIV>
+</HEADER>
+
+<SECTION id="web-section-odkryj">
+    <DIV id="section-info-content">
+        <DIV class="section-info-text-box">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy</DIV>
+        <DIV class="section-info-logo-box"></DIV>
+    </DIV>
+</SECTION>
+
+<SECTION id="web-section-postepy">
+    <DIV id="section-graphic-content"><DIV class="section-graphic-text">Postępy</DIV></DIV>
+</SECTION>
+
+<SECTION id="web-section-progress">
+    <DIV id="section-progress-content">
+    <DIV id="section-progress-button-content"><A href="https://stravatransportapp.herokuapp.com/Auth"><BUTTON class="section-progress-button">Autoryzuj użytkownika</BUTTON></A></DIV>
+    
+    {% for User in listaUserow %}
+    <DIV class="block-name">{{User.firstname}} {{User.lastname}}<DIV class="distance" style="font-size: 20px;">{{User.distance}} mi</DIV></DIV>
+    <DIV id="block-stat" style="visibility: hidden; height: 1px;">Postępy:
+        <DIV class="progress" style="width: 550px; height: 17px;">
+            <DIV class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="{{User.distance}}" aria-valuemin="0" aria-valuemax="100" style="width:{{User.procent}}%;">{{User.procent}}%</DIV>
+        </DIV>
+        <DIV class="distance" style="font-size: 24px;">({{User.distance*1.61}} km)</DIV>
+    </DIV>
+    {% endfor %}
+    </DIV>
+</SECTION>
+{% endblock %}
+

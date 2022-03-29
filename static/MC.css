@@ -1,0 +1,593 @@
+html, body
+{
+	margin: 0;
+	animation: transitionIn 0.5s;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+
+A
+{
+	text-decoration: none;
+	color: black;
+}
+
+#web-header
+{
+	width: 100%;
+	height: 100vh;
+	background-image: url(./web-pictures/MC-header.jpg);
+	background-size: cover;
+    background-position: center;
+}
+
+#header-panel
+{
+	padding-top: 50px;
+	padding-bottom: 10px;
+	margin-left: 50px;
+	margin-right: 50px;
+	font-size: 80px;
+	color: white;
+	border-bottom: 2px solid white;
+}
+
+#header-left-button, #header-right-button
+{
+	position: absolute;
+	z-index: 2;
+	width: 140px;
+	height: 35px;
+	border: none;
+	border: 1px solid white;
+	color: white;
+	background: transparent;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	transition: 0.8s;
+	padding: 0;
+}
+
+.header-button-link
+{
+	transition: 0.8s;
+	text-decoration: none;
+	color: white;
+}
+
+.header-button-link-text
+{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#header-left-button
+{
+	left: 160px;
+	bottom: 100px;
+}
+
+#header-right-button
+{
+	right: 160px;
+	bottom: 100px;
+}
+
+#header-triangle-left-info
+{
+	text-align: center;
+	color: white;
+	z-index: 2;
+	font-size: 25px;
+	position: absolute;
+	transition: 0.8s;
+	left: 100px;
+	bottom: 160px;
+}
+
+#header-triangle-right-info
+{
+	text-align: center;
+	color: white;
+	z-index: 2;
+	font-size: 25px;
+	position: absolute;
+	transition: 0.8s;
+	right: 100px;
+	bottom: 160px;
+}
+
+#header-left-button:hover, #header-right-button:hover
+{
+	border: 1px solid black;
+}
+
+#header-left-button:hover > .header-button-link, #header-right-button:hover > .header-button-link
+{
+	color: black;
+}
+
+#header-left-button:hover ~ #header-triangle-left
+{
+	border-bottom: 75vh solid white;
+}
+
+#header-left-button:hover ~ #header-triangle-left-info
+{
+	color: black;
+}
+
+#header-right-button:hover ~ #header-triangle-right
+{
+	border-bottom: 75vh solid white;
+}
+
+#header-right-button:hover ~ #header-triangle-right-info
+{
+	color: black;
+}
+
+#header-triangle-left
+{
+	width: 0;
+	height: 0;
+	left: 0;
+	bottom: 0;
+	position: absolute;
+	transition: 0.8s;
+	border-bottom: 75vh solid transparent;
+	border-right: 50vw solid transparent;
+}
+
+#header-triangle-right
+{
+	width: 0;
+	height: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	transition: 0.8s;
+	border-bottom: 75vh solid transparent;
+	border-left: 50vw solid transparent;
+}
+
+#web-nav
+{
+	position: fixed;
+	z-index: 3;
+	background-color: white;
+	border-right: 2px solid black;
+	width: 70px;
+	transition: 0.5s;
+	height: 100%;
+}
+
+.web-nav-class
+{
+	transform: translate(-202px);
+}
+
+.web-nav-class-back
+{
+	transform: translate(0);
+}
+
+.nav-border-line
+{
+	border: 1px solid black;
+	margin-top: 30px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#web-nav:hover
+{
+	width: 200px;
+}
+
+.nav-logo-button
+{
+	width: 40px;
+	height: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	cursor: pointer;
+	transition: 0.5s;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-logo-home
+{
+	width: 40px;
+	height: 40px;
+	background-image: url(./web-pictures/home.png);
+	background-size: cover;
+    background-position: center;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.nav-logo-GL
+{
+	width: 40px;
+	height: 40px;
+	background-image: url(./web-pictures/gl.jpg);
+	background-size: cover;
+    background-position: center;
+	cursor: pointer;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	transition: 0.3s;
+}
+
+.nav-logo-TDGL
+{
+	width: 40px;
+	height: 40px;
+	background-image: url(./web-pictures/TDGL-web-logo-black.png);
+	background-size: cover;
+    background-position: center;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.nav-logo-MC
+{
+	width: 40px;
+	height: 40px;
+	background-image: url(./web-pictures/MC-web-logo-black.png);
+	background-size: cover;
+    background-position: center;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.nav-logo-home-text
+{
+	display: none;
+	width: 110px;
+	text-align: center;
+}
+
+#web-nav A
+{
+	text-decoration: none;
+	color: black;
+}
+
+#web-nav:hover > A .nav-logo-GL
+{
+	width: 150px;
+	height: 40px;
+	background-image: url(./web-pictures/GL_logo_mid.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+#web-nav:hover > A .nav-logo-button
+{
+	width: 180px;
+	animation: transitionIn 2.0s;
+}
+
+#web-nav:hover > A .nav-logo-button > .nav-logo-home-text
+{
+	display: block;
+	margin-left: 20px;
+}
+
+.nav-info
+{
+	width: 100%;
+	font-size: 10px;
+	text-align: center;
+	position: absolute;
+	bottom: 5px;
+}
+
+#web-section, #web-section-odkryj, #web-section-postepy
+{
+	width: 100%;
+	height: 500px;
+}
+
+#section-info-content
+{
+	margin-left: 72px;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+    align-items: center;
+}
+
+.section-info-text-box
+{
+	width: 600px;
+	font-size: 20px;
+}
+
+.section-info-logo-box
+{
+	width: 450px;
+	height: 450px;
+	background-image: url(./web-pictures/MC-web-logo.png);
+	background-size: cover;
+	background-position: center;
+	transition: 0.5s;
+}
+
+.section-info-logo-box:hover
+{
+	transform: rotate(30deg);
+}
+
+#section-graphic-content
+{
+	margin-left: 72px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	background-image: url(./web-pictures/MC_progres_graphic.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.section-graphic-text
+{
+	font-size: 90px;
+    color: white;
+    background-size: 100%;
+    text-shadow: 1px 1px 15px black;
+}
+
+#web-section-progress
+{
+	width: 100%;
+	height: auto;
+}
+
+#section-progress-content
+{
+	margin-left: 72px;
+	height: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#section-progress-box-for-sports-content
+{
+	width: 100%;
+	height: 200px;
+	margin-bottom: 50px;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+}
+
+#box-for-sports
+{
+	width: 200px;
+	height: 200px;
+	margin-left: 10px;
+	margin-right: 10px;
+	display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.box-for-sports-logo-bike, .box-for-sports-logo-swim, .box-for-sports-logo-run
+{
+	width: 100px;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+
+.box-for-sports-logo-bike
+{
+	background-image: url(./web-pictures/bike.png);
+}
+
+.box-for-sports-logo-swim
+{
+	background-image: url(./web-pictures/swim.png);
+}
+
+.box-for-sports-logo-run
+{
+	background-image: url(./web-pictures/run.png);
+}
+
+.box-for-sports-text
+{
+	font-size: 24px;
+}
+
+.block-name
+{
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	min-height: 40px;
+	cursor: pointer;
+	border: 1px solid black;
+	transition: 0.5s;
+	font-size: 30px;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.block-name:hover
+{
+	background-color: black;
+	color: white;
+}
+
+#block-stat
+{
+	margin-left: 100px;
+	margin-right: 100px;
+	font-size: 40px;
+	border: 1px solid black;
+	transition: 0.6s;
+	display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.progres-bar
+{
+	width: 500px;
+	height: 70px;
+	border: 1px solid black;
+}
+
+@keyframes transitionback{
+  from {opacity: 0.1;}
+  to {opacity: 0;}
+}
+
+@keyframes transitionin{
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#web-footer
+{
+	width: 100%;
+	height: 360px;
+	background-color: black;
+}
+
+#footer-content
+{
+	margin-left: 72px;
+	height: 100%;
+	color: white;
+}
+
+.footer-social
+{
+	width: 300px;
+    height: 50px;
+    padding-top: 86px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-fb, .footer-ig, .footer-tw, .footer-in, .footer-yt
+{
+	width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer-fb
+{
+	background-image: url(./web-pictures/fb_white.png);
+}
+
+.footer-ig
+{
+    background-image: url(./web-pictures/ig_white.png);
+}
+
+.footer-tw
+{
+    background-image: url(./web-pictures/tw_white.png);
+}
+
+.footer-in
+{
+    background-image: url(./web-pictures/in_white.png);	
+}
+
+.footer-yt
+{
+    background-image: url(./web-pictures/yt_white.png);	
+}
+
+.footer-contact
+{
+	width: 100%;
+	height: 35px;
+	margin-top: 5px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#footer-contact-content
+{
+	width: 100%;
+	margin-top: 5px;
+	display: flex;
+	justify-content: center;
+}
+
+.footer-contact-methods
+{
+	width: 250px;
+    height: 70px;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#footer-ending
+{
+	margin-left: 40px;
+	margin-right: 40px;
+	height: 75px;
+	border-top: 1px solid white;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-ending-logo
+{
+	width: 250px;
+	height: 48px;
+	margin-top: 10px;
+	background-image: url(./web-pictures/GL_logo_mid_white.png);
+	background-size: cover;
+    background-position: center;
+}
+
+.footer-ending-authors-text
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: right;
+}
+
+@keyframes transitionIn{
+  from {
+    opacity: 0.3;
+  }
+   to{
+     opacity: 1;
+   }
+}

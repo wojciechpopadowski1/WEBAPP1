@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='MC.css') }}" />
+    <title>Aplikacja GlobaLogic - Monthly Cup</title>
+    <script src="{{ url_for('static', filename='progress_list.js') }}"></script>
+{% endblock %}
+{% block content %}
+<HEADER id="web-header">
+    <DIV id="header-panel">Monthly Cup</DIV>
+        <BUTTON id="header-left-button"><A href="/Monthly_Cup#web-section-odkryj" class="header-button-link"><DIV class="header-button-link-text">Przejdź dalej</DIV></A></BUTTON>
+        <BUTTON id="header-right-button"><A href="/Monthly_Cup#web-section-postepy" class="header-button-link"><DIV class="header-button-link-text">Przejdź dalej</DIV></A></BUTTON>
+        
+        <DIV id="header-triangle-left-info">Odkryj Monthly Cup</DIV>
+        <DIV id="header-triangle-right-info">Analizuj swoje postępy</DIV>
+        <DIV id="header-triangle-left"></DIV>
+        <DIV id="header-triangle-right"></DIV>
+</HEADER>
+
+<SECTION id="web-section-odkryj">
+    <DIV id="section-info-content">
+        <DIV class="section-info-text-box">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy</DIV>
+        <DIV class="section-info-logo-box"></DIV>
+    </DIV>
+</SECTION>
+
+<SECTION id="web-section-postepy">
+    <DIV id="section-graphic-content"><DIV class="section-graphic-text">Statystyki</DIV></DIV>
+</SECTION>
+
+<SECTION id="web-section-progress">
+    <DIV id="section-progress-content">
+    <DIV id="section-progress-box-for-sports-content">
+        <A href=""><DIV id="box-for-sports"><DIV class="box-for-sports-logo-bike"></DIV><DIV class="box-for-sports-text">Sport #1</DIV></DIV></A>
+        <A href=""><DIV id="box-for-sports"><DIV class="box-for-sports-logo-swim"></DIV><DIV class="box-for-sports-text">Sport #2</DIV></DIV></A>
+        <A href=""><DIV id="box-for-sports"><DIV class="box-for-sports-logo-run"></DIV><DIV class="box-for-sports-text">Sport #3</DIV></DIV></A>
+    </DIV>
+    
+    <DIV class="block-name">Imię</DIV>
+    <DIV id="block-stat" style="visibility: hidden; height: 1px;">Statystyki: <DIV class="progres-bar"></DIV></DIV>
+    
+    <DIV class="block-name">Imię</DIV>
+    <DIV id="block-stat" style="visibility: hidden; height: 1px;">Statystyki: <DIV class="progres-bar"></DIV></DIV>
+
+    <DIV class="block-name">Imię</DIV>
+    <DIV id="block-stat" style="visibility: hidden; height: 1px;">Statystyki: <DIV class="progres-bar"></DIV></DIV>					
+    
+    </DIV>
+</SECTION>
+{% endblock %}

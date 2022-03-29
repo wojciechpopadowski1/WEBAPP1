@@ -1,0 +1,422 @@
+html, body
+{
+	margin: 0;
+	animation: transitionIn 0.5s;
+	font-family: 'Montserrat', sans-serif;
+}
+
+A
+{
+	text-decoration: none;
+}
+
+#web-header
+{
+	width: 100%;
+	height: 100vh;
+	background-image: url(./web-pictures/HOME-header.jpg);
+	background-size: cover;
+    background-position: center;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#header-welcome
+{
+	font-size: 120px;
+	color: white;
+	text-shadow: 1px 1px 105px black;
+}
+
+#header-welcome-part2
+{
+	font-size: 30px;
+	margin-top: 100px;
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px 15px black;
+}
+
+#web-nav
+{
+	position: fixed;
+	z-index: 3;
+	width: 70px;
+	background-color: white;
+	border-right: 2px solid black;
+	transition: 0.5s;
+	height: 100%;
+}
+
+.web-nav-class
+{
+	transform: translate(-202px);
+}
+
+.web-nav-class-back
+{
+	transform: translate(0);
+}
+
+.nav-border-line
+{
+	border: 1px solid black;
+	margin-top: 30px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#web-nav:hover
+{
+	width: 200px;
+}
+
+.nav-logo-button
+{
+	width: 40px;
+	height: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	cursor: pointer;
+	transition: 0.5s;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-logo-home
+{
+	width: 40px;
+	height: 40px;
+	background-image: url(./web-pictures/home.png);
+	background-size: cover;
+    background-position: center;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.nav-logo-GL
+{
+	width: 40px;
+	height: 40px;
+	background-image: url(./web-pictures/gl.jpg);
+	background-size: cover;
+    background-position: center;
+	cursor: pointer;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	transition: 0.3s;
+}
+
+.nav-logo-TDGL
+{
+	width: 40px;
+	height: 40px;
+	background-image: url(./web-pictures/TDGL-web-logo-black.png);
+	background-size: cover;
+    background-position: center;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.nav-logo-MC
+{
+	width: 40px;
+	height: 40px;
+	background-image: url(./web-pictures/MC-web-logo-black.png);
+	background-size: cover;
+    background-position: center;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.nav-logo-home-text
+{
+	display: none;
+	width: 110px;
+	text-align: center;
+}
+
+#web-nav A
+{
+	text-decoration: none;
+	color: black;
+}
+
+#web-nav:hover > A .nav-logo-GL
+{
+	width: 140px;
+	height: 40px;
+	background-image: url(./web-pictures/GL_logo_mid.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+#web-nav:hover > A .nav-logo-button
+{
+	width: 180px;
+	animation: transitionIn 2.0s;
+}
+
+#web-nav:hover > A .nav-logo-button > .nav-logo-home-text
+{
+	display: block;
+	margin-left: 20px;
+}
+
+.nav-info
+{
+	width: 100%;
+	font-size: 10px;
+	text-align: center;
+	position: absolute;
+	bottom: 5px;
+}
+
+#web-section-graphic-TDGL
+{
+	width: 100%;
+	height: 500px;
+	background-image: url(./web-pictures/TDGL_photo_main.jpg);
+	background-size: cover;
+	background-position: center;
+	background-size: 100%;
+	transition: 1s;
+}
+
+#section-graphic-TDGL-content
+{
+	margin-left: 72px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	cursor: pointer;
+}
+
+#web-section-graphic-TDGL:hover
+{
+	background-size: 115%;
+	opacity: 0.9;
+}
+
+.section-graphic-TDGL-text
+{
+	font-size: 90px;
+	color: white;
+	background-size: 100%;
+	text-shadow: 1px 1px 15px black;
+}
+
+#web-section-info-TDGL
+{	
+	width: 100%;
+	height: 500px;
+}
+
+#section-info-TDGL-content
+{
+	margin-left: 72px;
+	height: 100%;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section-info-TDGL-text
+{
+	width: 850px;
+    column-count: 2;
+    text-align: justify;
+    column-gap: 60px;
+}
+
+#web-section-graphic-MC
+{
+	width: 100%;
+	height: 500px;
+}
+
+#section-graphic-MC-content
+{
+	margin-left: 72px;
+	height: 100%;
+	background-image: url(./web-pictures/MC_photo_main.jpg);
+	background-size: cover;
+	background-position: center;
+	background-size: 100%;
+	transition: 1s;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	cursor: pointer;
+}
+
+#section-graphic-MC-content:hover
+{
+	background-size: 115%;
+	opacity: 0.9;
+}
+
+.section-graphic-MC-text
+{
+	font-size: 90px;
+	color: white;
+	background-size: 100%;
+	text-shadow: 1px 1px 15px black;
+}
+
+#section-info-MC-content
+{
+	margin-left: 72px;
+	height: 100%;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#web-section-info-MC
+{
+	width: 100%;
+	height: 500px;
+}
+
+.section-info-MC-text
+{
+	width: 850px;
+    column-count: 2;
+    text-align: justify;
+    column-gap: 60px;
+}
+
+#web-footer
+{
+	width: 100%;
+	height: 360px;
+	background-color: black;
+}
+
+#footer-content
+{
+	margin-left: 72px;
+	height: 100%;
+	color: white;
+}
+
+.footer-social
+{
+	width: 300px;
+    height: 50px;
+    padding-top: 86px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-fb, .footer-ig, .footer-tw, .footer-in, .footer-yt
+{
+	width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer-fb
+{
+	background-image: url(./web-pictures/fb_white.png);
+}
+
+.footer-ig
+{
+    background-image: url(./web-pictures/ig_white.png);
+}
+
+.footer-tw
+{
+    background-image: url(./web-pictures/tw_white.png);
+}
+
+.footer-in
+{
+    background-image: url(./web-pictures/in_white.png);	
+}
+
+.footer-yt
+{
+    background-image: url(./web-pictures/yt_white.png);	
+}
+
+.footer-contact
+{
+	width: 100%;
+	height: 35px;
+	margin-top: 5px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#footer-contact-content
+{
+	width: 100%;
+	margin-top: 5px;
+	display: flex;
+	justify-content: center;
+}
+
+.footer-contact-methods
+{
+	width: 250px;
+    height: 70px;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#footer-ending
+{
+	margin-left: 40px;
+	margin-right: 40px;
+	height: 75px;
+	border-top: 1px solid white;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-ending-logo
+{
+	width: 250px;
+	height: 48px;
+	margin-top: 10px;
+	background-image: url(./web-pictures/GL_logo_mid_white.png);
+	background-size: cover;
+    background-position: center;
+}
+
+.footer-ending-authors-text
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: right;
+}
+
+@keyframes transitionIn{
+  from {
+    opacity: 0.3;
+  }
+   to{
+     opacity: 1;
+   }
+}

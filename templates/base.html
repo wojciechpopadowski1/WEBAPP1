@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<HTML lang="pl">
+<HEAD>
+    {% block head %}{% endblock %}
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet" />
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="{{ url_for('static', filename='nav.js') }}"></script>
+	<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon" />
+	<meta charset="UTF-8" />
+	<TITLE>Aplikacja GlobalLogic - Strona główna</TITLE>
+</HEAD>
+<BODY>
+	<NAV id="web-nav" class="web-nav-class">
+		<A href="https://www.globallogic.com/pl/" target="_blank"><DIV class="nav-logo-GL"></DIV></A>
+		<HR class="nav-border-line" />
+		<A href="/"><DIV class="nav-logo-button"><DIV class="nav-logo-home"></DIV><DIV class="nav-logo-home-text">Główna</DIV></DIV></A>
+		<A href="/Tour_de_GlobalLogic#web-header"><DIV class="nav-logo-button"><DIV class="nav-logo-TDGL"></DIV><DIV class="nav-logo-home-text">Tour de<br/>GlobalLogic</DIV></DIV></A>
+		<A href="/Monthly_Cup#web-header"><DIV class="nav-logo-button"><DIV class="nav-logo-MC"></DIV><DIV class="nav-logo-home-text">Monthy<br/>Cup</DIV></DIV></A>
+		<DIV class="nav-info">GlobalLogic<BR/>2022</DIV>
+	</NAV>
+    {% block content %}{% endblock %}
+	<FOOTER id="web-footer">
+		<DIV id="footer-content">
+			<DIV class="footer-social">
+				<A href="https://www.facebook.com/globallogicpoland/" target="_blank"><DIV class="footer-fb"></DIV></A>
+				<A href="https://www.instagram.com/globallogicpoland/" target="_blank"><DIV class="footer-ig"></DIV></A>
+				<A href="https://twitter.com/globallogic" target="_blank"><DIV class="footer-tw"></DIV></A>
+				<A href="https://pl.linkedin.com/company/globallogicpoland" target="_blank"><DIV class="footer-in"></DIV></A>
+				<A href="https://www.youtube.com/channel/UC4x6YY98lMx--zkhm1qn4Cg" target="_blank"><DIV class="footer-yt"></DIV></A>
+			</DIV>
+			<DIV class="footer-contact">Formy kontaktu</DIV>
+			<DIV id="footer-contact-content">
+				<DIV class="footer-contact-methods">Mail: <br/>info@globallogic.com</DIV>
+				<DIV class="footer-contact-methods">Telefon (Wrocław): <br/>+48 717 118 011</DIV>
+			</DIV>
+			<DIV id="footer-ending">
+				<DIV class="footer-ending-logo"></DIV>
+				<DIV class="footer-ending-authors"><P class="footer-ending-authors-text">GlobalLogic - Tour de GlobalLogic, Monthy Cup. Wszystkie prawa zastrzeżone.</P><P class="footer-ending-authors-text">Utworzone przez GlobalLogic - Praktykanci TŁIMC i TTC 2022</P></DIV>
+			</DIV>
+		</DIV>
+	</FOOTER>
+</BODY>
+</HTML>
